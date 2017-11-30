@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>home</title>
+</head>
+
+<body>
+  <img id="img1" src="./images/fb.png" alt="fb">
+  <!-- <img id="img2" src="./images/ins.jpg" alt="ins"> -->
+  <div id="status">
+
+
+  </div>
+  <script>
+    var images = [
+      "./images/fb.png",
+      "./images/ins.jpg",
+      "./images/fcc.png",
+      "./images/twitter.png"
+    ];
+    function changeImg(e) {
+      var el=e.target;
+      var newImgIndex = Math.round(Math.random() * 3);
+      while (el.src.indexOf(images[newImgIndex]) != -1) {
+        newImgIndex = Math.round(Math.random() * 3);
+      }
+      el.src = images[newImgIndex];
+    }
+    function updateStatus (e) {
+      var el=e.target;
+      var status=document.getElementById('status');
+      status.innerHTML='The image is changed to ' + el.src;
+      if (el.src.indexOf('./images/fcc.png')>-1) {
+        el.removerEventListener('click',changeImg);
+        el.removerEventListener('click',updateStatus);
+      }
+    }
+
+    document.getElementById('img1').addEventListener('click',changeImg);
+    document.getElementById('img1').addEventListener('click',updateStatus);
+  </script>
+</body>
+
+</html>
