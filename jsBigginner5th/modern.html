@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>modern</title>
+</head>
+
+<body>
+  <h1>Welcome to the modern page!</h1>
+  <script>
+    if (typeof navigator.geolocation == "undefined") {
+      location.replace("legacy.html");
+    }
+
+
+    // if (!navigator.geolocation) {
+    //   location.replace("legacy.html");
+    // }
+  </script>
+</body>
+
+</html>

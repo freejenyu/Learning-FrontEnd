@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>c8_2</title>
+</head>
+
+<body>
+  <img src="" width="200" height="150" alt="My Image" />
+  <script>
+    //       2. Modify Example 3 from the “Image Selection” Try It Out to display one of the four images
+    // randomly. Hint: refer to Chapter 5 and the Math.random() method.
+
+
+    var myImages = [
+      "../images/fb.png", //also notice the method of accessing the father-floder's subfloder
+      "../images/fcc.png",
+      "../images/ins.jpg",
+      "../images/puppy.jpg"
+    ];
+    var imgIndex = Math.round(Math.random() * 3);
+    // var imgIndex = prompt("Enter a number from 0 to 3", "");
+    document.images[0].src = myImages[imgIndex];
+
+
+
+    // sample code:
+    // function getRandomNumber(min, max) {
+    //   return Math.floor(Math.random() * max) + min;
+    // }
+    // var myImages = [
+    //   "usa.gif",
+    //   "canada.gif",
+    //   "jamaica.gif",
+    //   "mexico.gif"
+    // ];
+    // var random = getRandomNumber(0, myImages.length);
+    // document.images[0].src = myImages[random];
+  </script>
+</body>
+
+</html>

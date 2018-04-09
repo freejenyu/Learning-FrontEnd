@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>1</title>
+</head>
+
+<body>
+  <script>
+    //     1. Write a JavaScript function that reverse a number.
+    // Example x = 32243;
+    // Expected Output : 34223
+
+    function reverseNumber(n) {
+      var string = n + "";
+      var reverseString = "";
+      for (var i = 0; i < string.length; i++) {
+        reverseString = string.charAt(i) + reverseString;
+      }
+      var reversedNum = parseInt(reverseString);
+      return reversedNum;
+    }
+    var x = 32243;
+    var y = 123456789;
+    alert(reverseNumber(x));
+    alert(reverseNumber(y));
+
+
+    // sample code:
+    // function reverse_a_number(n) {
+    //   n = n + "";
+    //   return n.split("").reverse().join("");
+    // }
+    // console.log(reverse_a_number(32243));
+
+// Explanation:
+// Assume n = 1000.
+// Convert a number to a string :
+// Code : -> n = n + "";
+// Note : There are different ways to convert number to string :
+//
+// String literal -> str = "" + num + "";
+// String constructor -> str = String(num); // key word new is no longer required.
+// toString -> str = num.toString();
+// String Literal simple -> str = "" + num;
+// The split() method is used to split a String object into an array of strings by separating the string into substrings.
+// Code : console.log('1000'.split(""));
+// Output : ["1", "0", "0", "0"]
+//
+// The reverse() method is used to reverse an array in place. The first array element becomes the last and the last becomes the first.
+// Code : console.log(["1", "0", "0", "0"].reverse());
+// Output : ["0", "0", "0", "1"]
+//
+// The join() method is used to join all elements of an array into a string.
+// Code : console.log(["1", "0", "0", "0"].reverse().join(""));
+// Output : "0001"
+  </script>
+</body>
+
+</html>

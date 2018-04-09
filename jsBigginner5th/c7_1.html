@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>c7_1</title>
+</head>
+
+<body>
+  <script>
+    //     1. Create a page that gets the user’s date of birth. Then, using that information, tell her on what
+    // day of the week she was born.
+    var getBirthday = prompt("Enter your birthday, such as: 19860810",
+      "19860810");
+    var yearOfBirth = parseInt(getBirthday.slice(0, 4));
+    var monthOfBirth = parseInt(getBirthday.slice(4, 6));
+    var dayOfbirth = parseInt(getBirthday.slice(6, 8));
+    var birthday = new Date(yearOfBirth, monthOfBirth - 1, dayOfbirth); // note the month must subtracte one.
+    var weekdays = [
+      "Sun.", "Mon.", "Tue.", "Wen.", "Thu.", "Fri.", "Sat."
+    ];
+    var weekdayOfBirth = weekdays[birthday.getDay()];
+    alert("You were born on " + weekdayOfBirth + " of the week!");
+
+
+    // sample code:
+    // var days = ["Sunday", "Monday", "Tuesday", "Wednesday",
+    //   "Thursday", "Friday", "Saturday"
+    // ];
+    // var year = prompt("Enter the four digit year you were born.");
+    // var month = prompt("Enter your birth month (1 - 12).");
+    // var date = prompt("Enter the day you were born.");
+    // var birthDate = new Date(year, month - 1, date); //the variable doesn't mean the exact day of birth, so the "date" of the variable "birthDate" should be titled. 
+    // alert(days[birthDate.getDay()]);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>c5_3</title>
+</head>
+
+<body>
+  <script>
+    // 3. ch5_example8.html uses a function to create objects using literal notation. Modify this example to use the Person data type.
+
+
+    //   function createPerson(firstName, lastName) {
+    //     return {
+    //       firstName: firstName,
+    //       lastName: lastName,
+    //       getFullName: function() {
+    //         return this.firstName + " " + this.lastName
+    //       },
+    //       greet: function(person) {
+    //         alert("Hello, " + person.getFullName() +
+    //           ". I'm " + this.getFullName());
+    //       }
+    //     };
+    //   }
+    //   var johnDoe = createPerson("John", "Doe");
+    //   var janeDoe = createPerson("Jane", "Doe");
+    //   johnDoe.greet(janeDoe);
+
+    function Person(firstName, lastName) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.getFullName = function() {
+        return this.firstName + " " + this.lastName;
+      };
+      this.greet = function() {
+        alert("Hello, " + this.getFullName() + ". I'm " + this.getFullName());
+      };
+    }
+    var johnDoe = new Person("John", "Doe");
+    var janeDoe = new Person("Jane", "Doe");
+    johnDoe.greet(johnDoe);
+    johnDoe.greet(janeDoe);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>c5_2</title>
+</head>
+
+<body>
+  <script>
+    // 2. Obtain a list of names from the user, storing each name entered in an array. Keep getting another name until the user enters nothing. Sort the names in ascending order and then write them out to the page, with each name on its own line.
+    var usernames = [];
+    var getName;
+    do {
+      getName = prompt("Input a name.", "");
+      if (getName != "") {
+        usernames.push(getName);
+      }
+    } while (getName != "")
+    if (usernames.length != 0) {
+      usernames.sort()
+    }
+    document.write(usernames.join("<br>"));
+// should avoid using do ... while first at any time.
+
+    //sample code:
+
+    // var inputName = "";
+    // var namesArray = [];
+    // while ((inputName = prompt("Enter a name", "")) != "") {
+    //   namesArray[namesArray.length] = inputName;
+    // }
+    // namesArray.sort();
+    // var namesList = namesArray.join("<br/>");
+    // document.write(namesList);
+  </script>
+</body>
+
+</html>

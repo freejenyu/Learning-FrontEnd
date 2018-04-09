@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>legacy</title>
+</head>
+
+<body>
+  <h1>Welcome to the Legacy page. You need to upgrade!</h1>
+  <script>
+    if (typeof navigator.geolocation != "undefined") {
+      location.replace("modern.html")
+    }
+
+    // if (navigator.geolocation) {
+    //   location.replace("modern.html");
+    // }
+  </script>
+</body>
+
+</html>

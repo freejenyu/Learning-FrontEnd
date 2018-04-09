@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>c5_1</title>
+</head>
+
+<body>
+  <!-- 1. Using the Date type, calculate the date 12 months from now and write this into a web page. -->
+  <script>
+    var today = new Date();
+    today.setMonth(12); // wrong, must add the current months, the other ones are the same when calculating time ahead from now.
+    document.write(today.toDateString());
+
+    // sample code:
+
+    // var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    //   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    // ];
+    // var nowDate = new Date();
+    // nowDate.setMonth(nowDate.getMonth() + 12);
+    // document.write("Date 12 months ahead is " + nowDate.getDate());
+    // document.write(" " + months[nowDate.getMonth()]);
+    // document.write(" " + nowDate.getFullYear());
+  </script>
+</body>
+
+</html>
